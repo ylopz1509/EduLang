@@ -1,0 +1,17 @@
+package com.yaelteam.edulang.navegacion
+
+sealed class Rutas(val ruta: String) {
+    object Login : Rutas("login")
+    object MenuPrincipal : Rutas("menu_principal")
+
+    // modulos listos
+    object GestionEstudiantes : Rutas("gestion_estudiantes")
+    object DetalleEstudiante : Rutas("detalle_estudiante")
+    object AgregarEstudiante : Rutas("agregar_estudiante")
+
+    // Modulos faltantes
+    object GestionDocentes : Rutas("gestion_docentes")
+    object GestionCursos : Rutas("gestion_cursos")
+    object GestionPagos : Rutas("gestion_pagos")
+
+}
