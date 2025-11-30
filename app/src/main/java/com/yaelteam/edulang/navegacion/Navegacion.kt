@@ -11,7 +11,8 @@ sealed class Rutas(val ruta: String) {
 
     // Modulos faltantes
     object GestionDocentes : Rutas("gestion_docentes")
+    object GestionMatriculas : Rutas("gestion_matrículas")
     object GestionCursos : Rutas("gestion_cursos")
-    object GestionPagos : Rutas("gestion_pagos")
 
+    object GestionPagos: Rutas("gestion_pagos")
 }

@@ -16,7 +16,15 @@ fun PantallaDocentes() {
     }
 }
 
-// (Cursos)
+// (Matriculas)
+@Composable
+fun PantallaMatriculas() {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text("Módulo de Matriculas (Ingenieras trabajando)")
+    }
+}
+
+// Cursos)
 @Composable
 fun PantallaCursos() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -24,10 +32,10 @@ fun PantallaCursos() {
     }
 }
 
-// Pagos y Matrículas)
+//Pagos
 @Composable
-fun PantallaPagos() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("Módulo de Pagos (Ingenieras trabajando)")
+fun PantallaPagos(){
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+        Text("Modulo de Pagos (Ingenieras trabajando)")
     }
 }

@@ -25,11 +25,14 @@ fun PantallaMenuPrincipal(navController: NavController) {
         // Btn modulo Docentes
         BotonMenu(text = "Docentes", onClick = { navController.navigate(Rutas.GestionDocentes.ruta) })
 
+        // Btn modulo Matrículas
+        BotonMenu(text = "Matrículas", onClick = { navController.navigate(Rutas.GestionMatriculas.ruta) })
+
         // Btn modulo Cursos
         BotonMenu(text = "Cursos", onClick = { navController.navigate(Rutas.GestionCursos.ruta) })
 
-        // Btn modulo Pagos
-        BotonMenu(text = "Pagos y Matrículas", onClick = { navController.navigate(Rutas.GestionPagos.ruta) })
+        //Btn modulo Pagos
+        BotonMenu(text = "Pagos", onClick = { navController.navigate(Rutas.GestionPagos.ruta)})
 
         Spacer(modifier = Modifier.height(32.dp))
         OutlinedButton(onClick = {

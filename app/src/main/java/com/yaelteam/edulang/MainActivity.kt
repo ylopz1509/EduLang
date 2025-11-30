@@ -14,6 +14,7 @@ import com.yaelteam.edulang.pantallas.PantallaCursos
 import com.yaelteam.edulang.pantallas.PantallaDocentes
 import com.yaelteam.edulang.pantallas.PantallaEstudiantes
 import com.yaelteam.edulang.pantallas.PantallaLogin
+import com.yaelteam.edulang.pantallas.PantallaMatriculas
 import com.yaelteam.edulang.pantallas.PantallaMenuPrincipal
 import com.yaelteam.edulang.pantallas.PantallaPagos
 
@@ -57,10 +58,13 @@ fun NavegacionApp() {
         composable(Rutas.GestionDocentes.ruta) {
             PantallaDocentes()
         }
+        composable(Rutas.GestionMatriculas.ruta) {
+            PantallaMatriculas()
+        }
         composable(Rutas.GestionCursos.ruta) {
             PantallaCursos()
         }
-        composable(Rutas.GestionPagos.ruta) {
+        composable (Rutas.GestionPagos.ruta){
             PantallaPagos()
         }
         composable(Rutas.GestionEstudiantes.ruta) {
