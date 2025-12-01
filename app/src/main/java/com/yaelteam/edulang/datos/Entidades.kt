@@ -37,3 +37,28 @@ data class Matricula(
     val cursoId: Int,
     val fecha: String = ""
 )
+
+@Entity(tableName = "docentes")
+data class Docente(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val nombreCompleto: String,
+    val asignatura: String,
+    val disponibilidad: String
+)
+
+@Entity(tableName = "cursos_asignados")
+data class CursosAsignados(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val idDocente: Int,
+    val idCurso: Int
+)
+
+@Entity(tableName="pagos")
+data class Pago(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val idEstudiante: Int,
+    val idCurso: Int,
+    val tipo_pago: String,
+    val monto: Double,
+    val fecha: String
+)

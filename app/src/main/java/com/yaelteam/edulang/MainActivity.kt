@@ -1,5 +1,6 @@
 package com.yaelteam.edulang
 
+import PantallaPagos
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,9 +11,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.yaelteam.edulang.navegacion.Rutas
 import com.yaelteam.edulang.pantallas.PantallaAgregarCursos
+import com.yaelteam.edulang.pantallas.PantallaAgregarCursosAsignados
+import com.yaelteam.edulang.pantallas.PantallaAgregarDocente
 import com.yaelteam.edulang.pantallas.PantallaAgregarEstudiante
 import com.yaelteam.edulang.pantallas.PantallaAgregarMatriculas
+import com.yaelteam.edulang.pantallas.PantallaAgregarPago
 import com.yaelteam.edulang.pantallas.PantallaCursos
+import com.yaelteam.edulang.pantallas.PantallaCursosAsignados
 import com.yaelteam.edulang.pantallas.PantallaDocentes
 import com.yaelteam.edulang.pantallas.PantallaEstudiantes
 import com.yaelteam.edulang.pantallas.PantallaHistorialMatriculas
@@ -59,7 +64,10 @@ fun NavegacionApp() {
         // Modulos faltantes.-
         // modificar el contenido de las funciones
         composable(Rutas.GestionDocentes.ruta) {
-            PantallaDocentes()
+            PantallaDocentes(navController)
+        }
+        composable(Rutas.AgregarDocente.ruta) {
+            PantallaAgregarDocente(navController)
         }
         composable(Rutas.GestionMatriculas.ruta) {
             PantallaAgregarMatriculas(navController)
@@ -73,8 +81,17 @@ fun NavegacionApp() {
         composable (Rutas.AgregarCursos.ruta){
             PantallaAgregarCursos(navController)
         }
+        composable (Rutas.GestionCursosDocentes.ruta){
+            PantallaCursosAsignados(navController)
+        }
+        composable(Rutas.AgregarCursosDocentes.ruta) {
+            PantallaAgregarCursosAsignados(navController)
+        }
         composable (Rutas.GestionPagos.ruta){
-            PantallaPagos()
+            PantallaPagos(navController)
+        }
+        composable(Rutas.AgregarPago.ruta) {
+            PantallaAgregarPago(navController)
         }
         composable(Rutas.GestionEstudiantes.ruta) {
             PantallaEstudiantes(navController)

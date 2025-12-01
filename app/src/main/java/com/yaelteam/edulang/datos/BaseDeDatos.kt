@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 // (Usuario y estudiante)
 @Database(
-    entities = [Usuario::class, Estudiante::class, Curso::class,Matricula::class],
+    entities = [Usuario::class, Estudiante::class, Curso::class, Matricula::class, Docente::class, CursosAsignados::class, Pago::class],
     version = 1,
     exportSchema = false
 )
@@ -16,6 +16,9 @@ abstract class BaseDeDatosEduLang : RoomDatabase() {
     abstract fun cursoDao(): CursoDao
 
     abstract fun matriculaDao():MatriculaDao
+    abstract fun docenteDao(): DocenteDao
+    abstract fun cursosAsignadosDao(): CursosAsignadosDao
+    abstract fun pagoDao(): PagoDao
     companion object {
         @Volatile
         private var INSTANCE: BaseDeDatosEduLang? = null
@@ -26,7 +29,7 @@ abstract class BaseDeDatosEduLang : RoomDatabase() {
                     context.applicationContext,
                     BaseDeDatosEduLang::class.java,
                     "edulang_database"
-                ).build()
+                ).fallbackToDestructiveMigration() .build()
                 INSTANCE = instance
                 instance
             }
