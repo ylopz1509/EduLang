@@ -7,13 +7,15 @@ import androidx.room.RoomDatabase
 
 // (Usuario y estudiante)
 @Database(
-    entities = [Usuario::class, Estudiante::class, Curso::class],
+    entities = [Usuario::class, Estudiante::class, Curso::class,Matricula::class],
     version = 1,
     exportSchema = false
 )
 abstract class BaseDeDatosEduLang : RoomDatabase() {
     abstract fun estudianteDao(): EstudianteDao
     abstract fun cursoDao(): CursoDao
+
+    abstract fun matriculaDao():MatriculaDao
     companion object {
         @Volatile
         private var INSTANCE: BaseDeDatosEduLang? = null

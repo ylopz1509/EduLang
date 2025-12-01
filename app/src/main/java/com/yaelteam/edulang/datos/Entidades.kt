@@ -30,3 +30,10 @@ data class Curso(
     val nivel: String,
     val cupo: String
 )
+@Entity(tableName = "matriculas")
+data class Matricula(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val matriculaEstudiante: String,
+    val cursoId: Int,
+    val fecha: String = ""
+)

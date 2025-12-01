@@ -20,4 +20,8 @@ interface EstudianteDao {
     // Eliminar
     @Delete
     suspend fun eliminarEstudiante(estudiante: Estudiante)
+
+    @Query("SELECT * FROM estudiantes WHERE matricula = :matricula LIMIT 1")
+    suspend fun obtenerPorMatriculaDirecta(matricula: String): Estudiante?
+
 }

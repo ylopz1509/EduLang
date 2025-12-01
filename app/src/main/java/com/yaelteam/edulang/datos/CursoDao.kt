@@ -20,4 +20,7 @@ interface CursoDao {
 
     @Delete
     suspend fun eliminarCurso(curso: Curso)
+
+    @Query("SELECT*FROM cursos WHERE id = :id LIMIT 1")
+    suspend fun obtenerPorId(id:Int): Curso?
 }

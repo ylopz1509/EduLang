@@ -11,9 +11,11 @@ import androidx.navigation.compose.rememberNavController
 import com.yaelteam.edulang.navegacion.Rutas
 import com.yaelteam.edulang.pantallas.PantallaAgregarCursos
 import com.yaelteam.edulang.pantallas.PantallaAgregarEstudiante
+import com.yaelteam.edulang.pantallas.PantallaAgregarMatriculas
 import com.yaelteam.edulang.pantallas.PantallaCursos
 import com.yaelteam.edulang.pantallas.PantallaDocentes
 import com.yaelteam.edulang.pantallas.PantallaEstudiantes
+import com.yaelteam.edulang.pantallas.PantallaHistorialMatriculas
 import com.yaelteam.edulang.pantallas.PantallaLogin
 import com.yaelteam.edulang.pantallas.PantallaMatriculas
 import com.yaelteam.edulang.pantallas.PantallaMenuPrincipal
@@ -60,7 +62,10 @@ fun NavegacionApp() {
             PantallaDocentes()
         }
         composable(Rutas.GestionMatriculas.ruta) {
-            PantallaMatriculas()
+            PantallaAgregarMatriculas(navController)
+        }
+        composable(Rutas.HistorialMatriculas.ruta) {
+            PantallaHistorialMatriculas(navController)
         }
         composable(Rutas.GestionCursos.ruta) {
             PantallaCursos(navController)
