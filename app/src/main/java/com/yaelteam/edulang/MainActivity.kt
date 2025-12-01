@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.yaelteam.edulang.navegacion.Rutas
+import com.yaelteam.edulang.pantallas.PantallaAgregarCursos
 import com.yaelteam.edulang.pantallas.PantallaAgregarEstudiante
 import com.yaelteam.edulang.pantallas.PantallaCursos
 import com.yaelteam.edulang.pantallas.PantallaDocentes
@@ -62,7 +63,10 @@ fun NavegacionApp() {
             PantallaMatriculas()
         }
         composable(Rutas.GestionCursos.ruta) {
-            PantallaCursos()
+            PantallaCursos(navController)
+        }
+        composable (Rutas.AgregarCursos.ruta){
+            PantallaAgregarCursos(navController)
         }
         composable (Rutas.GestionPagos.ruta){
             PantallaPagos()

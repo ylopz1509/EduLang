@@ -14,5 +14,6 @@ sealed class Rutas(val ruta: String) {
     object GestionMatriculas : Rutas("gestion_matrículas")
     object GestionCursos : Rutas("gestion_cursos")
 
+    object AgregarCursos : Rutas ("agregar_cursos")
     object GestionPagos: Rutas("gestion_pagos")
 }

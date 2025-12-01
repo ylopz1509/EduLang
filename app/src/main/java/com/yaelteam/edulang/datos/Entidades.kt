@@ -20,3 +20,13 @@ data class Estudiante(
     val matricula: String,
     val historialAcademico: String
 )
+
+//Modulo para los cursos
+@Entity(tableName = "cursos")
+data class Curso(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val idioma: String,
+    val horario: String,
+    val nivel: String,
+    val cupo: String
+)
