@@ -1,13 +1,16 @@
 package com.yaelteam.edulang.pantallas
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.yaelteam.edulang.R
 import com.yaelteam.edulang.navegacion.Rutas
 
 @Composable
@@ -16,10 +19,20 @@ fun PantallaLogin(navController: NavController) {
     var password by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Image(
+            painter = painterResource(id = R.drawable.logo_edulang),
+            contentDescription = "Logo de EduLang",
+            modifier = Modifier
+                .size(280.dp)
+                .padding(bottom = 16.dp)
+        )
+
         Text("Bienvenido a EduLang", style = MaterialTheme.typography.headlineMedium)
         Spacer(modifier = Modifier.height(32.dp))
 
